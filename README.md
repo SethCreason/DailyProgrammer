@@ -1,2 +1,2 @@
 # DailyProgrammer
-A collection of my submissions to r/DailyProgrammer Challenges
+A collection of my submissions to r/DailyProgrammer
