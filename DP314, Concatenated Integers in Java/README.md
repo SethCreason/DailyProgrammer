@@ -30,4 +30,4 @@ You should emit the smallest and largest integer you can make, per line. Example
 	173246791 917463217
 
 # Bonus
-Try and come up with a more efficient approach than using permutations.
+Try and come up with a more efficient approach than using permutations. 
