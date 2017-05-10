@@ -17,4 +17,4 @@ Find all numbers that are pandigital in Roman numerals using each of the symbols
 
 1444, 1446, 1464, 1466, 1644, 1646, 1664, 1666 
 
-See [OEIS sequence A105416](http://oeis.org/A105416) for more information.
+See [OEIS sequence A105416](http://oeis.org/A105416) for more information. 
