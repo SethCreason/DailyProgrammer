@@ -1,6 +1,0 @@
-c:\users\seth\documents\visual studio 2015\Projects\DP306\DP306\bin\Debug\DP306.exe.config
-c:\users\seth\documents\visual studio 2015\Projects\DP306\DP306\bin\Debug\DP306.exe
-c:\users\seth\documents\visual studio 2015\Projects\DP306\DP306\bin\Debug\DP306.pdb
-c:\users\seth\documents\visual studio 2015\Projects\DP306\DP306\obj\Debug\DP306.csprojResolveAssemblyReference.cache
-c:\users\seth\documents\visual studio 2015\Projects\DP306\DP306\obj\Debug\DP306.exe
-c:\users\seth\documents\visual studio 2015\Projects\DP306\DP306\obj\Debug\DP306.pdb
