@@ -30,9 +30,9 @@ namespace DP277
         {
             for (float i = numerator; i > 0; i--)
             {
-                if ((numerator / i % 1 == 0) && (denominator / i % 1 == 0))
+                if ((numerator/i % 1 == 0) && (denominator/i % 1 == 0))
                 {
-                    Console.WriteLine(numerator+"/"+denominator+" simplified: "+(numerator/i)+"/"+(denominator / i));
+                    Console.WriteLine(numerator+"/"+denominator+" simplified: "+(numerator/i)+"/"+(denominator/i));
                     return;
                 }
             }
