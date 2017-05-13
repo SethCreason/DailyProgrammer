@@ -9,12 +9,9 @@
  * Date: 5.12.2017
  */
 using System;
-using System.Collections;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DP274
 {
