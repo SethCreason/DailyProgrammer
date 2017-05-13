@@ -15,6 +15,19 @@ namespace DP274
 {
     class Program
     {
+        public static String A = "4";
+        public static String B = "6";
+        public static String E = "3";
+        public static String I = "|";
+        public static String L = "1";
+        public static String M = "(V)";
+        public static String N = "(\\)";
+        public static String O = "0";
+        public static String S = "5";
+        public static String T = "7";
+        public static String V = "\\/";
+        public static String W = "`//";
+
         static void Main(string[] args)
         {
             choice();
@@ -59,19 +72,6 @@ namespace DP274
 
         static void encrypt(String word)
         {
-            String A = "4";
-            String B = "6";
-            String E = "3";
-            String I = "|";
-            String L = "1";
-            String M = "(V)";
-            String N = "(\\)";
-            String O = "0";
-            String S = "5";
-            String T = "7";
-            String V = "\\/";
-            String W = "`//";
-
             String[] splitWord = word.Split(new char[0]);
             Console.WriteLine();
             for (int i = 0; i < splitWord.Length; i++)
@@ -105,7 +105,6 @@ namespace DP274
                 Console.Write(" " + splitWord[i] + " ");
                 Console.WriteLine();
             }
-
             Console.WriteLine();
             choice();
             Console.ReadLine();
@@ -113,19 +112,6 @@ namespace DP274
 
         static void decrypt(String word)
         {
-            String A = "4";
-            String B = "6";
-            String E = "3";
-            String I = "|";
-            String L = "1";
-            String M = "(V)";
-            String N = "(\\)";
-            String O = "0";
-            String S = "5";
-            String T = "7";
-            String V = "\\/";
-            String W = "`//";
-
             String[] splitWord = word.Split(new char[0]);
             Console.WriteLine();
             for (int i = 0; i < splitWord.Length; i++)
@@ -147,7 +133,6 @@ namespace DP274
                 Console.Write(" " + splitWord[i] + " ");
                 Console.WriteLine();
             }
-
             Console.WriteLine();
             choice();
             Console.ReadLine();
@@ -155,8 +140,6 @@ namespace DP274
 
         static void Gettysburg()
         {
-
-            //The Declaration of Independence
             WebClient client = new WebClient();
             Stream stream = client.OpenRead("https://raw.githubusercontent.com/SethCreason/DailyProgrammer/master/DP312%2C%20L33tspeak%20Translator/GettysburgAddress.txt");
             StreamReader reader = new StreamReader(stream);
@@ -172,34 +155,36 @@ namespace DP274
                     {
                         for (int i = 0; i < splitContent.Length; i++)
                         {
-                            splitContent[i] = splitContent[i].Replace("a", "4");
-                            splitContent[i] = splitContent[i].Replace("A", "4");
-                            splitContent[i] = splitContent[i].Replace("b", "6");
-                            splitContent[i] = splitContent[i].Replace("B", "6");
-                            splitContent[i] = splitContent[i].Replace("e", "3");
-                            splitContent[i] = splitContent[i].Replace("E", "3");
-                            splitContent[i] = splitContent[i].Replace("i", "|");
-                            splitContent[i] = splitContent[i].Replace("I", "|");
-                            splitContent[i] = splitContent[i].Replace("l", "1");
-                            splitContent[i] = splitContent[i].Replace("L", "1");
-                            splitContent[i] = splitContent[i].Replace("m", "(V)");
-                            splitContent[i] = splitContent[i].Replace("M", "(V)");
-                            splitContent[i] = splitContent[i].Replace("n", "(\\)");
-                            splitContent[i] = splitContent[i].Replace("N", "(\\)");
-                            splitContent[i] = splitContent[i].Replace("o", "0");
-                            splitContent[i] = splitContent[i].Replace("O", "0");
-                            splitContent[i] = splitContent[i].Replace("s", "5");
-                            splitContent[i] = splitContent[i].Replace("S", "5");
-                            splitContent[i] = splitContent[i].Replace("t", "7");
-                            splitContent[i] = splitContent[i].Replace("T", "7");
-                            splitContent[i] = splitContent[i].Replace("v", "\\/");
-                            splitContent[i] = splitContent[i].Replace("V", "\\/");
-                            splitContent[i] = splitContent[i].Replace("w", "`//");
-                            splitContent[i] = splitContent[i].Replace("W", "`//");
+                            splitContent[i] = splitContent[i].Replace("a", A);
+                            splitContent[i] = splitContent[i].Replace("A", A);
+                            splitContent[i] = splitContent[i].Replace("b", B);
+                            splitContent[i] = splitContent[i].Replace("B", B);
+                            splitContent[i] = splitContent[i].Replace("e", E);
+                            splitContent[i] = splitContent[i].Replace("E", E);
+                            splitContent[i] = splitContent[i].Replace("i", I);
+                            splitContent[i] = splitContent[i].Replace("I", I);
+                            splitContent[i] = splitContent[i].Replace("l", L);
+                            splitContent[i] = splitContent[i].Replace("L", L);
+                            splitContent[i] = splitContent[i].Replace("m", M);
+                            splitContent[i] = splitContent[i].Replace("M", M);
+                            splitContent[i] = splitContent[i].Replace("n", N);
+                            splitContent[i] = splitContent[i].Replace("N", N);
+                            splitContent[i] = splitContent[i].Replace("o", O);
+                            splitContent[i] = splitContent[i].Replace("O", O);
+                            splitContent[i] = splitContent[i].Replace("s", S);
+                            splitContent[i] = splitContent[i].Replace("S", S);
+                            splitContent[i] = splitContent[i].Replace("t", T);
+                            splitContent[i] = splitContent[i].Replace("T", T);
+                            splitContent[i] = splitContent[i].Replace("v", V);
+                            splitContent[i] = splitContent[i].Replace("V", V);
+                            splitContent[i] = splitContent[i].Replace("w", W);
+                            splitContent[i] = splitContent[i].Replace("W", W);
 
                             Console.Write(splitContent[i] + " ");
                         }
-
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        choice();
                         Console.ReadLine();
                         break;
                     }
