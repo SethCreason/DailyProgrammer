@@ -3,8 +3,8 @@
  * reddit.com/r/dailyprogrammer/comments/4r8fod
  * Objective:  Write a program to decipher Thomas Jefferson Beale's message
  * Details:  Beale's message, a list of numbers, corresponds to the Declaration
- *           of Independance.  Each number is the nth word, and that word's first 
- *           letter represents Beale's plaintext.
+ *           of Independance.  Each number is that nth word's first letter, and 
+ *           the cominbation of those letters represent Beale's true message.
  * Author: Seth Creason
  * Date: 5.12.2017
  */
@@ -22,12 +22,14 @@ namespace DP274
     {
         static void Main(string[] args)
         {
+            //The Declaration of Independence
             WebClient client = new WebClient();
             Stream stream = client.OpenRead("https://raw.githubusercontent.com/SethCreason/DailyProgrammer/master/DP274%2C%20Beales%20Cipher%20in%20C%23/DeclarationText.txt");
             StreamReader reader = new StreamReader(stream);
             String content = reader.ReadToEnd();
             string[] splitContent = content.Split(new char[0]);
 
+            //Beale's message (list of numbers)
             Stream stream2 = client.OpenRead("https://raw.githubusercontent.com/SethCreason/DailyProgrammer/master/DP274%2C%20Beales%20Cipher%20in%20C%23/Cipher.txt");
             StreamReader reader2 = new StreamReader(stream2);
             String content2 = reader2.ReadToEnd();
@@ -41,42 +43,41 @@ namespace DP274
             correctionList.RemoveAt(635);
             correctionList.RemoveAt(700);
             splitContent = correctionList.ToArray();
-            splitContent[810] = "yundamentally";
-            splitContent[1004] = "xave";
+            splitContent[810] = "yundamentally"; splitContent[1004] = "xave";
+            splitContent2[165] = "7"; splitContent2[222] = "85"; splitContent2[252] = "35"; splitContent2[366] = "7"; splitContent2[530] = "54";
+            splitContent2[636] = "35"; splitContent2[696] = "18"; splitContent2[697] = "7"; splitContent2[698] = "110"; splitContent2[701] = "85";
+            splitContent2[722] = "239";
 
-            //Spacing between words
-            int[] spaces2 = new int[] { 115, 37, 15, 47, 79, 811, 196, 211, 554, 53, 35, 82, 71, 287, 353, 47, 59, 41, 1005, 16, 72/*below - end line 1 Output*/,
-                                       85, 191, 273, 620, 63, 191, 48, 110, 48};
-            int[] spaces = new int[] {115};
-
-            foreach (int i in spaces)
-            {
-                splitContent[i] = splitContent[i] + " ";
-            }
+            //Formatting. Unnecessary for challenge.
+            int[] spaces = new int[] { 1,5,14,16,19,25,27,34,39,43,48,52,59,61,63,73,75,80,83,87,92,95,102,104,107,116,116,125,113,142,149,151,154,
+                                       161,166,171,174,179,181,187,192,200,203,208,215,224,226,229,236,239,247,253,255,259,262,268,273,280,283,289,
+                                       295,297,303,312,315,323,331,334,340,343,347,350,358,364,367,370,379,381,389,396,399,404,410,412,416,419,425,
+                                       432,435,441,446,448,454,458,464,472,474,476,481,483,491,493,497,511,514,520,522,530,538,545,548,553,555,563,
+                                       569,571,575,579,583,587,593,596,601,603,610,615,619,624,627,630,637,641,643,648,653,656,659,666,670,676,681,
+                                       687,690,699,702,707,715,717,720,725,727,731,733,743,747,749,752,754,761,763,150 };
+            int[] commas = new int[] { 34, 59, 80, 113, 133, 259, 303, 315, 350, 367, 419, 511, 579, 624, 653 };
+            int[] periods = new int[] { 331, 545, 593, 676 };
+            //Formatting. Unnecessary for challenge.
 
             for (int i = 0; i < splitContent2.Length; i++)
             {
-                if (i == 1 || i == 5 || i == 14 || i == 16 || i == 19 || i == 25 || i == 27 || i == 34 || i == 39 || i == 43 || i == 48 || i == 52 || i == 59 ||
-                    i == 61 || i == 63 || i == 73 || i == 75 || i == 80 || i == 83 || i == 87 || i == 92 || i == 95 || i == 102 || i == 104 || i == 107 || i == 113 || 
-                    i == 116 || i == 125 || i == 133 || i == 142 || i == 149 || i == 151 || i == 154 || i == 161 || i == 166 || i == 171 || i == 174 || i == 179 ||
-                    i == 181 || i == 187 || i == 192 || i == 200 /*End of first paragraph*/ || i == 203 || i == 208 || i == 215 || i == 224 || i == 226 || i == 229 || 
-                    i == 236 || i == 239 || i == 247 || i == 253 || i == 255 || i == 259 || i == 262 || i == 268 || i == 273 || i == 280 || i == 283 || i == 289 ||
-                    i == 295 || i == 297 || i == 303 || i == 312 || i == 315 || i == 323 || i == 331 || i == 334 || i == 340 || i == 343 || i == 347 || i == 350 ||
-                    i == 358 || i == 364 || i == 367 || i == 370 || i == 379 || i == 381 || i == 389 || i == 396 || i == 399 || i == 404 || i == 410 || i == 412 ||
-                    i == 416 || i == 419 || i == 425 || i == 432 || i == 435 || i == 441 || i == 446 || i == 448 || i == 454 || i == 458 || i == 464 || i == 472 ||
-                    i == 474 || i == 476 || i == 481 || i == 483 || i == 491 || i == 493 || i == 497 || i == 511 || i == 514 || i == 520 || i == 522 || i == 530 ||
-                    i == 538 || i == 545 /*End of first paragraph*/ || i == 548 || i == 553 || i == 555 || i == 563 || i == 569 || i == 571 || i == 575 || i == 579 ||
-                    i == 583 || i == 587 || i == 593 || i == 596 || i == 601 || i == 603 || i == 610 || i == 615 || i == 619 || i == 624 || i == 627 || i == 630 ||
-                    i == 637 || i == 641 || i == 643 || i == 648 || i == 653 || i == 656 || i == 659 || i == 666 || i == 670 || i == 676 || i == 681 || i == 687 ||
-                    i == 690 || i == 699 || i == 702 || i == 707 || i == 715 || i == 717 || i == 720 || i == 725 || i == 727 || i == 731 || i == 733 || i == 743 ||
-                    i == 747 || i == 749 || i == 752 || i == 754 || i == 761 || i == 763)
+                //Formatting. Unnecessary for challenge.
+                if (commas.Contains(i))
+                    Console.Write(",");
+                if (periods.Contains(i))
+                    Console.Write(".");
+                if (i == 200)
+                    Console.Write(":");
+                if (i == 454)
+                    Console.Write(";");
+                if (spaces.Contains(i))
                     Console.Write(" ");
                 if (i == 200 || i == 545)
                 {
                     Console.WriteLine();
                     Console.WriteLine();
                 }
-
+                //Formatting. Unnecessary for challenge.
 
                 int pos = Convert.ToInt32(splitContent2[i]);
                 Console.Write(splitContent[(pos-1)].Substring(0, 1) );
