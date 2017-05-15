@@ -32,7 +32,3 @@ Your program should emit the word as a series of elements by name with proper ca
 	POISON (phosphorus, oxygen, iodine, sulfur, oxygen, nitrogen)
 	SiCKNeSS (silicon, carbon, potassium, neon, sulfur, sulfur)
 	TiCKLiSH (titanium, carbon, potassium, lithium, sulfur, hydrogen)
-
-# Bonus
-
-Note that *bacon* has a few different possibilities. Which is the heaviest by atomic weight?
